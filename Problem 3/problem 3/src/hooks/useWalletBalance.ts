@@ -1,25 +1,24 @@
 import { useState, useEffect } from 'react';
+import { WalletBalance } from '../types/wallet';
 
-interface WalletBalance {
-  currency: string;
-  amount: number;
-  blockchain: string;
-}
-
-const useWalletBalances = (): WalletBalance[] => {
+export const useWalletBalances = (): WalletBalance[] => {
   const [balances, setBalances] = useState<WalletBalance[]>([]);
 
   useEffect(() => {
-    // Mock fetching wallet balances
-    const mockBalances: WalletBalance[] = [
-      { currency: 'USD', amount: 1000, blockchain: 'Ethereum' },
-      { currency: 'BTC', amount: 2, blockchain: 'Osmosis' },
-      { currency: 'ETH', amount: 5, blockchain: 'Arbitrum' },
-    ];
-    setBalances(mockBalances);
+    // Simulating API call
+    const fetchBalances = async () => {
+      // Replace this with actual API call
+      const mockBalances: WalletBalance[] = [
+        { currency: 'ETH', amount: 0.5, blockchain: 'Ethereum' },
+        { currency: 'OSMO', amount: 100, blockchain: 'Osmosis' },
+        { currency: 'ARB', amount: 50, blockchain: 'Arbitrum' },
+        { currency: 'ZIL', amount: 1000, blockchain: 'Zilliqa' },
+      ];
+      setBalances(mockBalances);
+    };
+
+    fetchBalances();
   }, []);
 
   return balances;
-}
-
-export default useWalletBalances;
+};

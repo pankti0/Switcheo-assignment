@@ -1,19 +1,29 @@
 import React from 'react';
+import { WalletBalance } from '../types/wallet';
 
 interface WalletRowProps {
-  className: string;
   amount: number;
   usdValue: number;
   formattedAmount: string;
+  blockchain: string;
+  currency: string;
 }
 
-const WalletRow: React.FC<WalletRowProps> = ({ className, usdValue, formattedAmount }) => {
+const WalletRow: React.FC<WalletRowProps> = ({
+  amount,
+  usdValue,
+  formattedAmount,
+  blockchain,
+  currency
+}) => {
   return (
-    <div className={className}>
-      <div>Amount: {formattedAmount}</div>
-      <div>USD Value: {usdValue.toFixed(2)}</div>
+    <div>
+      <span>{blockchain}</span>
+      <span>{currency}</span>
+      <span>{formattedAmount}</span>
+      <span>${usdValue.toFixed(2)}</span>
     </div>
   );
-}
+};
 
 export default WalletRow;
