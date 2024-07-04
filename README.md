@@ -44,4 +44,5 @@ Key changes and improvements:
 8. Added null checks for prices when calculating USD value.
 9. Added missing props to the WalletRow component.
 
-### I have created the components and hooks and all necessary files in order to run the code the refactored code can be found in Problem 3\problem 3\src\components\WalletPage.tsx
+### Please Note:
+#### I have created the components and hooks and all necessary files in order to run the code the refactored code can be found in Problem 3\problem 3\src\components\WalletPage.tsx
