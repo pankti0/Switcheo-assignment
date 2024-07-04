@@ -1,5 +1,5 @@
 ## Problem 1
-Find solution inside Problem 1/Problem 1.along with my analysis of the 3 implementations and some test logs.
+Find solution inside Problem 1\Problem 1.along with my analysis of the 3 implementations and some test logs.
 
 ## Problem 2
 I have used vite+react hence clone the code found under the Problem 2 folder. Then use npm run dev to view the website on your local server.
@@ -30,3 +30,18 @@ In the getPriority function: getPriority(balance.blockchain)
 In the sortedBalances useMemo hook: getPriority(lhs.blockchain) and getPriority(rhs.blockchain)
 This discrepancy indicates a mismatch between the defined interface and the actual structure of the data being used in the component.
 To resolve this issue, the WalletBalance interface should be updated to include the blockchain attribute
+
+### To simplify I made the following changes in the refactor:
+Key changes and improvements:
+
+1. Fixed the error logging to use console.error.
+2. Corrected the sortedBalances filter logic to properly handle priorities and positive balances.
+3. Updated the sort function to handle the equality case for priorities.
+4. Added the blockchain attribute to the WalletBalance interface.
+5. Implemented the Datasource class with error handling.
+6. Used proper TypeScript typing throughout the component.
+7. Simplified the formattedBalances calculation.
+8. Added null checks for prices when calculating USD value.
+9. Added missing props to the WalletRow component.
+
+### I have created the components and hooks and all necessary files in order to run the code the refactored code can be found in Problem 3\problem 3\src\components\WalletPage.tsx
