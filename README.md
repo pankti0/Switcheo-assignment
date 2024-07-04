@@ -4,7 +4,7 @@ Find solution inside Problem 1/Problem 1.along with my analysis of the 3 impleme
 ## Problem 2
 I have used vite+react hence clone the code found under the Problem 2 folder. Then use npm run dev to view the website on your local server.
 
-##Problem 3
+## Problem 3
 The computational inefficiencies and anti-patterns found along with their improvements are as follows:
 1. The error is logged to the console using console.err, which is not a standard method.
 Improvement: Use console.error for logging errors and consider implementing proper error handling and display.
